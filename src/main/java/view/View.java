@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface View {
 
+    void showInstruction();
+
     void showAllToys(List<Toy> toys);
 
     void showToyRaffle(Toy toy);
@@ -13,4 +15,9 @@ public interface View {
     void showRaffleQueue(List<Integer> raffle);
 
     void showError(Exception e);
+
+    void showMessage(String message);
+
+    void showInput(String message);
+
 }

@@ -6,6 +6,7 @@ import model.Toy;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -64,17 +65,28 @@ public class StoreService {
         return toy;
     }
 
+    public void createToy(String userInput) {
+        String[] data = userInput.split(" ");
+        Toy toy = new Toy(data[0], Integer.parseInt(data[1]), Integer.parseInt(data[2]));
+        addToy(toy);
+    }
+
+    public boolean changeFrequency(String userInput) {
+        String[] data = userInput.split(" ");
+        int toyId = Integer.parseInt(data[0]);
+        int frequency = Integer.parseInt(data[1]);
+        for (Toy t: this.toys) {
+            if (toyId == t.getId()) {
+                t.setFrequency(frequency);
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void saveToy(Toy toy, String filename) {
         try(FileWriter writer = new FileWriter(filename, true)) {
             writer.write(toy.toString());
-        } catch (IOException e) {
-            throw new RuntimeException("Ошибка записи в файл");
-        }
-    }
-    public boolean save(String filename, String data) {
-        try(FileWriter writer = new FileWriter(filename, true)) {
-            writer.write(data);
-            return true;
         } catch (IOException e) {
             throw new RuntimeException("Ошибка записи в файл");
         }

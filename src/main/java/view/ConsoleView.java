@@ -5,19 +5,30 @@ import model.Toy;
 import java.util.List;
 
 public class ConsoleView implements View {
+
+    @Override
+    public void showInstruction() {
+        System.out.println("╔═══════════════════════════════════════╗");
+        System.out.println("║  1 - Добавить игрушку                 ║");
+        System.out.println("║  2 - Изменить вес                     ║");
+        System.out.println("║  3 - Начать лотерею                   ║");
+        System.out.println("║  0 - Выйти из программы               ║");
+        System.out.println("╚═══════════════════════════════════════╝");
+    }
+
     @Override
     public void showAllToys(List<Toy> toys) {
-        showUpLine();
         if (toys.isEmpty()) {
             showMessage("Список игрушек пуст");
         } else {
+            showUpLine();
             System.out.print( "║  id │ Наименование     │Кол-во│Частота║\n");
             System.out.print( "╟─────┼──────────────────┼──────┼───────╢\n");
             for (Toy toy : toys) {
                 showRow(toy);
             }
+            showBottomLine();
         }
-        showBottomLine();
     }
 
     @Override
@@ -37,14 +48,21 @@ public class ConsoleView implements View {
         System.out.println("╚════════╧══════════════════════════════════════╝");
     }
 
+    public void showMessage(String message) {
+        showUpLine();
+        System.out.printf( "║ %-37s ║\n", message);
+        showBottomLine();
+    }
+
+    public void showInput(String message) {
+        System.out.printf("║ %s ", message);
+    }
+
     private void showUpLine() {
         System.out.println("╔═══════════════════════════════════════╗");
     }
     private void showRow(Toy toy) {
         System.out.printf( "║ %3d │ %-16s │ %4d │  %3d  ║\n", toy.getId(), toy.getName(), toy.getQuantity(), toy.getFrequency());
-    }
-    private void showMessage(String message) {
-        System.out.printf( "║ %-37s ║\n", message);
     }
     private void showBottomLine() {
         System.out.println("╚═══════════════════════════════════════╝");
