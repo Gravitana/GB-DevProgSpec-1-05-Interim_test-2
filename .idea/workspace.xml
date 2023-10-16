@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d268d1e-dcbe-4db8-b405-1d8f0c6e2863" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Store.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Toy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/presenters/Presenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/gift.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/EmptyStoreException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/StoreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/ConsoleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Store.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Toy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Toy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presenters/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presenters/Presenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +23,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -76,6 +80,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
